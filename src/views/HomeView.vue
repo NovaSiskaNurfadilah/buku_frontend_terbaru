@@ -3,7 +3,7 @@
 
   <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
     <div class="content text-center">
-      <h1 class="text-white">BOOKSTORE NOPAII </h1>
+      <h1 class="text-white">Selamat Datang Ditoko Buku Saya </h1>
     </div>
   </div>
 

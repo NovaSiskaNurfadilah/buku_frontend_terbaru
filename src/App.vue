@@ -16,6 +16,9 @@
           <li class="nav-item">
             <router-link to="/Member" class="nav-link">Anggota</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/Peminjaman" class="nav-link">Peminjaman</router-link>
+          </li>
         </ul>
       </div>
     </nav>

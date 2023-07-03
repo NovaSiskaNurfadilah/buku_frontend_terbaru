@@ -138,7 +138,7 @@ export default {
   },
   methods: {
     submitPeminjaman() {
-      fetch('http://localhost/buku/peminjaman-buku.php', {
+      fetch('https://bukubackend--novasiskanurfad.repl.co/peminjaman-buku.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ export default {
           });
     },
     submitPengembalian() {
-        fetch('http://localhost/buku/pengembalian-buku.php', {
+        fetch('https://bukubackend--novasiskanurfad.repl.co/pengembalian-buku.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -175,7 +175,7 @@ export default {
       },
     selectPeminjaman() {
       try {
-        const response = fetch(`http://localhost/buku/select-peminjaman-berdasarkan-id.php${this.selectedNumber}`);
+        const response = fetch(`https://bukubackend--novasiskanurfad.repl.co/select-peminjaman-berdasarkan-id.php${this.selectedNumber}`);
         if (response.ok) {
           const data = response.json();
           console.log(data);
@@ -189,7 +189,7 @@ export default {
 
     fetchPeminjamanDipinjam() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIPINJAM
-      axios.get('http://localhost/buku/status-dipinjam-list-peminjaman.php')
+      axios.get('https://bukubackend--novasiskanurfad.repl.co/status-dipinjam-list-peminjaman.php')
           .then((response) => {
             this.peminjamanDipinjam = response.data;
           })
@@ -199,7 +199,7 @@ export default {
     },
     fetchPeminjamanDikembalikan() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIKEMBALIKAN
-      axios.get( 'http://localhost/buku/status-dikembalikan-list-peminjaman.php')
+      axios.get( 'https://bukubackend--novasiskanurfad.repl.co/status-dikembalikan-list-peminjaman.php')
           .then((response) => {
             this.peminjamanDikembalikan = response.data;
           })

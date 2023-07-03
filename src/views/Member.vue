@@ -86,7 +86,7 @@ export default {
   methods: {
     async fetchMembers() {
       try {
-        const response = await fetch("http://localhost/buku/select-anggota.php");
+        const response = await fetch("https://bukubackend--novasiskanurfad.repl.co/select-anggota.php");
         if (response.ok) {
           const data = await response.json();
           this.members = data;
@@ -99,7 +99,7 @@ export default {
     },
     async selectMember() {
       try {
-        const response = await fetch(`http://localhost/buku/select-nomor-anggota.php?nomor=${this.selectedNumber}`);
+        const response = await fetch(`https://bukubackend--novasiskanurfad.repl.co/select-nomor-anggota.php${this.selectedNumber}`);
         if (response.ok) {
           const data = await response.json();
           console.log(data);
@@ -112,7 +112,7 @@ export default {
     },
     async addMember() {
       try {
-        const response = await fetch("http://localhost/buku/insert-anggota.php", {
+        const response = await fetch("https://bukubackend--novasiskanurfad.repl.co/insert-anggota.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -131,7 +131,7 @@ export default {
     },
     async updateMemberData() {
       try {
-        const response = await fetch(`http://localhost/buku/update-nomor-anggota.php?nomor=${this.updateMember.nomor}`, {
+        const response = await fetch(`https://bukubackend--novasiskanurfad.repl.co/update-buku.php?nomor=${this.updateMember.nomor}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -150,7 +150,7 @@ export default {
     },
     async deleteMember() {
       try {
-        const response = await fetch(`http://localhost/buku/delete-nomor-anggota.php?nomor=${this.deleteMemberNumber}`, {
+        const response = await fetch(`https://bukubackend--novasiskanurfad.repl.co/delete-nomor-anggota.php${this.deleteMemberNumber}`, {
           method: "DELETE"
         });
         if (response.ok) {

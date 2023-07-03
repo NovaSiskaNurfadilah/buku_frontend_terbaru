@@ -175,7 +175,7 @@ export default {
       },
     selectPeminjaman() {
       try {
-        const response = fetch(`https://bukubackend--novasiskanurfad.repl.co/select-peminjaman-berdasarkan-id.php${this.selectedNumber}`);
+        const response = fetch(`https://bukubackend--novasiskanurfad.repl.co/select-peminjaman-berdasarkan-id.php=${this.selectedNumber}`);
         if (response.ok) {
           const data = response.json();
           console.log(data);

@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     fetchCategories() {
-      axios.get('http://localhost/buku/select-kategori.php')
+      axios.get('https://bukubackend--novasiskanurfad.repl.co/select-kategori.php')
           .then(response => {
             this.categories = response.data;
           })
@@ -47,7 +47,7 @@ export default {
     },
     deleteCategory(kode) {
       if (confirm('Are you sure you want to delete this category?')) {
-        axios.delete(`http://localhost/buku/delete-kategori.php?kode=${kode}`)
+        axios.delete(`https://bukubackend--novasiskanurfad.repl.co/delete-kategori.php?kode=${kode}`)
             .then(() => {
               alert('Category deleted successfully');
               this.fetchCategories();
